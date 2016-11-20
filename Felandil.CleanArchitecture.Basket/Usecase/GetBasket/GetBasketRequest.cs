@@ -1,4 +1,6 @@
-﻿namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
+﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
+namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
 {
   /// <summary>
   /// The get basket request.

@@ -1,4 +1,6 @@
-﻿namespace Felandil.CleanArchitecture
+﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
+namespace Felandil.CleanArchitecture
 {
   /// <summary>
   /// The usecase presenter.
@@ -30,10 +32,6 @@
     /// The <see cref="TViewModel"/>.
     /// </returns>
     public abstract TViewModel Present();
-
-    #endregion
-
-    #region Methods
 
     /// <summary>
     /// The set response.

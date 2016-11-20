@@ -1,7 +1,4 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GetBasketPresenter.cs" company="Felandil IT">
-//   Copyright (c) 2014 - 2016 Felandil IT. All rights reserved.
-// </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture.Web.Presenters
 {
@@ -25,8 +22,8 @@ namespace Felandil.CleanArchitecture.Web.Presenters
     {
       return new BasketModel
                {
-                 ArticleCount = this.Response.ArticleCount,
-                 BasketValue = this.Response.BasketValue.ToString("C0"),
+                 ArticleCount = this.Response.ArticleCount, 
+                 BasketValue = this.Response.BasketValue.ToString("C0"), 
                  Email = this.Response.Email
                };
     }

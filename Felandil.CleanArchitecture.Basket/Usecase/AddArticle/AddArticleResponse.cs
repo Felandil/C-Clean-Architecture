@@ -1,7 +1,4 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AddArticleResponse.cs" company="Felandil IT">
-//   Copyright (c) 2014 - 2016 Felandil IT. All rights reserved.
-// </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture.Basket.Usecase.AddArticle
 {

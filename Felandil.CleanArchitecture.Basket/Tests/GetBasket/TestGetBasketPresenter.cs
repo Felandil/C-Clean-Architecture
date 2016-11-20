@@ -1,4 +1,6 @@
-﻿namespace Felandil.CleanArchitecture.Basket.Tests.GetBasket
+﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
+namespace Felandil.CleanArchitecture.Basket.Tests.GetBasket
 {
   using System;
 

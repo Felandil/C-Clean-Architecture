@@ -1,7 +1,4 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GetBasketInteractorTest.cs" company="Felandil IT">
-//   Copyright (c) 2014 - 2016 Felandil IT. All rights reserved.
-// </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture.Basket.Tests.GetBasket
 {
@@ -30,7 +27,7 @@ namespace Felandil.CleanArchitecture.Basket.Tests.GetBasket
       var articleTwo = new Article { Price = 69.99M, Quantity = 1 };
 
       var interactor = new GetBasketInteractor<IViewModel>(
-        new TestGetBasketPresenter(),
+        new TestGetBasketPresenter(), 
         new InMemoryBasketRepository(new Basket("a@b.de") { Articles = new List<Article> { articleOne, articleTwo } }));
       interactor.Execute(new GetBasketRequest { Email = "a@b.de" });
 

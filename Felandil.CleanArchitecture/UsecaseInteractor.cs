@@ -1,4 +1,6 @@
-﻿namespace Felandil.CleanArchitecture
+﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
+namespace Felandil.CleanArchitecture
 {
   /// <summary>
   /// The usecase interactor.
@@ -30,7 +32,7 @@
 
     #endregion
 
-    #region Properties
+    #region Public Properties
 
     /// <summary>
     /// Gets the presenter.

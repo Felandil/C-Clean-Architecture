@@ -1,7 +1,4 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GetBasketInteractor.cs" company="Felandil IT">
-//   Copyright (c) 2014 - 2016 Felandil IT. All rights reserved.
-// </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
 {
@@ -14,12 +11,13 @@ namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
   /// <typeparam name="TViewModel">
   /// The View Model
   /// </typeparam>
-  public class GetBasketInteractor<TViewModel> : UsecaseInteractor<GetBasketRequest, GetBasketResponse, TViewModel> where TViewModel : IViewModel
+  public class GetBasketInteractor<TViewModel> : UsecaseInteractor<GetBasketRequest, GetBasketResponse, TViewModel>
+    where TViewModel : IViewModel
   {
     #region Constructors and Destructors
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="GetBasketInteractor"/> class.
+    /// Initializes a new instance of the <see cref="GetBasketInteractor{TViewModel}"/> class. 
     /// </summary>
     /// <param name="presenter">
     /// The presenter.
@@ -56,12 +54,7 @@ namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
     {
       var basket = this.Repository.GetBasket(request.Email) ?? new Basket(request.Email);
 
-      this.Presenter.SetResponse(new GetBasketResponse
-                                   {
-                                     ArticleCount = basket.Articles.Count,
-                                     BasketValue = basket.Value,
-                                     Email = request.Email
-                                   });
+      this.Presenter.SetResponse(new GetBasketResponse { ArticleCount = basket.Articles.Count, BasketValue = basket.Value, Email = request.Email });
     }
 
     #endregion
