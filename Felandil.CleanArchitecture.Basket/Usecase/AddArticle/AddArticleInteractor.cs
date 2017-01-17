@@ -1,4 +1,7 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AddArticleInteractor.cs" company="Felandil IT">
+//    Copyright (c) 2008 -2017 Felandil IT. All rights reserved.
+//  </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture.Basket.Usecase.AddArticle
 {
@@ -42,7 +45,7 @@ namespace Felandil.CleanArchitecture.Basket.Usecase.AddArticle
 
     #endregion
 
-    #region Public Methods and Operators
+    #region Methods
 
     /// <summary>
     /// The execute.
@@ -50,14 +53,17 @@ namespace Felandil.CleanArchitecture.Basket.Usecase.AddArticle
     /// <param name="request">
     /// The request.
     /// </param>
-    public override void Execute(AddArticleRequest request)
+    /// <returns>
+    /// The <see cref="AddArticleResponse"/>.
+    /// </returns>
+    protected override AddArticleResponse Action(AddArticleRequest request)
     {
       var basket = this.Repository.GetBasket(request.Email) ?? new Basket(request.Email);
 
       basket.Articles.Add(new Article { Price = request.Price, Quantity = request.Quantity });
       this.Repository.SaveBasket(basket);
 
-      this.Presenter.SetResponse(new AddArticleResponse { BasketValue = basket.Value, ArticleCount = basket.Articles.Count, Email = request.Email });
+      return new AddArticleResponse { BasketValue = basket.Value, ArticleCount = basket.Articles.Count, Email = request.Email };
     }
 
     #endregion

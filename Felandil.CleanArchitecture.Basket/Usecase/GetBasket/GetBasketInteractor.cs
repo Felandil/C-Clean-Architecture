@@ -1,4 +1,7 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="GetBasketInteractor.cs" company="Felandil IT">
+//    Copyright (c) 2008 -2017 Felandil IT. All rights reserved.
+//  </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
 {
@@ -45,16 +48,18 @@ namespace Felandil.CleanArchitecture.Basket.Usecase.GetBasket
     #region Public Methods and Operators
 
     /// <summary>
-    /// The execute.
+    /// The action.
     /// </summary>
     /// <param name="request">
     /// The request.
     /// </param>
-    public override void Execute(GetBasketRequest request)
+    /// <returns>
+    /// The <see cref="GetBasketResponse"/>.
+    /// </returns>
+    protected override GetBasketResponse Action(GetBasketRequest request)
     {
       var basket = this.Repository.GetBasket(request.Email) ?? new Basket(request.Email);
-
-      this.Presenter.SetResponse(new GetBasketResponse { ArticleCount = basket.Articles.Count, BasketValue = basket.Value, Email = request.Email });
+      return new GetBasketResponse { ArticleCount = basket.Articles.Count, BasketValue = basket.Value, Email = request.Email };
     }
 
     #endregion

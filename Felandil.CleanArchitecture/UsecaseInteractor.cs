@@ -1,4 +1,7 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="UsecaseInteractor.cs" company="Felandil IT">
+//    Copyright (c) 2008 -2017 Felandil IT. All rights reserved.
+//  </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 namespace Felandil.CleanArchitecture
 {
@@ -49,7 +52,25 @@ namespace Felandil.CleanArchitecture
     /// <param name="request">
     /// The request.
     /// </param>
-    public abstract void Execute(TRequest request);
+    public void Execute(TRequest request)
+    {
+      this.Presenter.SetResponse(this.Action(request));
+    }
+
+    #endregion
+
+    #region Methods
+
+    /// <summary>
+    /// The action.
+    /// </summary>
+    /// <param name="request">
+    /// The request.
+    /// </param>
+    /// <returns>
+    /// The <see cref="TResponse"/>.
+    /// </returns>
+    protected abstract TResponse Action(TRequest request);
 
     #endregion
   }
