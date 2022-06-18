@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Felandil.CleanArchitecture", "Felandil.CleanArchitecture\Felandil.CleanArchitecture.csproj", "{AF406D86-1D6A-4BFF-99FC-F3A9C1B43068}"
 EndProject
@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Felandil.CleanArchitecture.NetCore", "Felandil.CleanArchitecture.NetCore\Felandil.CleanArchitecture.NetCore.csproj", "{F86ADCB1-F9D8-477E-A03D-D50FB91A5000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,8 +40,15 @@ Global
 		{8F4EDDA8-10F6-455B-B90F-68389EBB95C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4EDDA8-10F6-455B-B90F-68389EBB95C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4EDDA8-10F6-455B-B90F-68389EBB95C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86ADCB1-F9D8-477E-A03D-D50FB91A5000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86ADCB1-F9D8-477E-A03D-D50FB91A5000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86ADCB1-F9D8-477E-A03D-D50FB91A5000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86ADCB1-F9D8-477E-A03D-D50FB91A5000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04383949-B79F-4F38-B62E-5564CAA63596}
 	EndGlobalSection
 EndGlobal

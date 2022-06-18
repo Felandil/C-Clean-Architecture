@@ -156,3 +156,5 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/.vs/Felandil.CleanArchitecture/config/applicationhost.config
+/.vs/Felandil.CleanArchitecture/config

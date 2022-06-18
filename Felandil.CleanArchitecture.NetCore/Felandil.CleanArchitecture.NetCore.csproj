@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>Felandil.CleanArchitecture</PackageId>
+    <Authors>Felandil.CleanArchitecture</Authors>
+    <Product>Felandil.CleanArchitecture</Product>
+    <Version>3.0.0</Version>
+    <Copyright>2022 Felandil</Copyright>
+    <Description>Clean Architecture Adaption in C#</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Felandil/C-Clean-Architecture</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>clean architecture</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Felandil.CleanArchitecture\IRequestBoundry.cs" Link="IRequestBoundry.cs" />
+    <Compile Include="..\Felandil.CleanArchitecture\IResponseBoundry.cs" Link="IResponseBoundry.cs" />
+    <Compile Include="..\Felandil.CleanArchitecture\IViewModel.cs" Link="IViewModel.cs" />
+    <Compile Include="..\Felandil.CleanArchitecture\UsecaseInteractor.cs" Link="UsecaseInteractor.cs" />
+    <Compile Include="..\Felandil.CleanArchitecture\UsecasePresenter.cs" Link="UsecasePresenter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
