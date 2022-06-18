@@ -22,7 +22,7 @@ namespace Felandil.CleanArchitecture.Basket.Tests.AddArticle
     public void TestBasketDoesNotExistShouldReturnInformationAndCreateNewBasket()
     {
       var interactor = new AddArticleInteractor<IViewModel>(new TestAddArticlePresenter(), new InMemoryBasketRepository());
-      interactor.Execute(new AddArticleRequest { Email = "test@a.de", Price = 9.99M, Quantity = 2 });
+      interactor.ExecuteAsync(new AddArticleRequest { Email = "test@a.de", Price = 9.99M, Quantity = 2 });
 
       var response = ((TestAddArticlePresenter)interactor.Presenter).GetResponse();
 
@@ -42,7 +42,7 @@ namespace Felandil.CleanArchitecture.Basket.Tests.AddArticle
       var inMemoryBasketRepository = new InMemoryBasketRepository(basket);
 
       var interactor = new AddArticleInteractor<IViewModel>(new TestAddArticlePresenter(), inMemoryBasketRepository);
-      interactor.Execute(new AddArticleRequest { Email = "test@a.de", Price = 9.99M, Quantity = 2 });
+      interactor.ExecuteAsync(new AddArticleRequest { Email = "test@a.de", Price = 9.99M, Quantity = 2 });
 
       var response = ((TestAddArticlePresenter)interactor.Presenter).GetResponse();
 

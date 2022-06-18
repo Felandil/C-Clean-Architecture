@@ -1,33 +1,19 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------------------------
+﻿using System.Threading.Tasks;
+using Felandil.CleanArchitecture.Basket.Usecase.AddArticle;
+using Felandil.CleanArchitecture.Web.Models;
+
 namespace Felandil.CleanArchitecture.Web.Presenters
 {
-  using Felandil.CleanArchitecture.Basket.Usecase.AddArticle;
-  using Felandil.CleanArchitecture.Web.Models;
-
-  /// <summary>
-  /// The add article presenter.
-  /// </summary>
   public class AddArticlePresenter : UsecasePresenter<AddArticleResponse, BasketModel>
   {
-    #region Public Methods and Operators
-
-    /// <summary>
-    /// The present.
-    /// </summary>
-    /// <returns>
-    /// The <see cref="BasketModel"/>.
-    /// </returns>
-    public override BasketModel Present()
+    public override async Task<BasketModel> PresentAsync()
     {
       return new BasketModel
-               {
-                 ArticleCount = this.Response.ArticleCount, 
-                 BasketValue = this.Response.BasketValue.ToString("C0"), 
-                 Email = this.Response.Email
-               };
+      {
+        ArticleCount = Response.ArticleCount,
+        BasketValue = Response.BasketValue.ToString("C0"),
+        Email = Response.Email
+      };
     }
-
-    #endregion
   }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Felandil.CleanArchitecture</id>
+    <version>2.0.0.0</version>
+    <title>Felandil Clean Architecture</title>
+    <authors>Sebastian Fuhrhop</authors>
+    <owners>Sebastian Fuhrhop</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Clean Architecture Adaption in C#</description>
+    <copyright>Copyright 2022</copyright>
+    <tags>clean architecture</tags>
+  </metadata>
+</package>

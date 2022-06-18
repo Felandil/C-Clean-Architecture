@@ -29,7 +29,7 @@ namespace Felandil.CleanArchitecture.Basket.Tests.GetBasket
       var interactor = new GetBasketInteractor<IViewModel>(
         new TestGetBasketPresenter(), 
         new InMemoryBasketRepository(new Basket("a@b.de") { Articles = new List<Article> { articleOne, articleTwo } }));
-      interactor.Execute(new GetBasketRequest { Email = "a@b.de" });
+      interactor.ExecuteAsync(new GetBasketRequest { Email = "a@b.de" });
 
       var response = ((TestGetBasketPresenter)interactor.Presenter).GetBasketResponse();
 
@@ -45,7 +45,7 @@ namespace Felandil.CleanArchitecture.Basket.Tests.GetBasket
     public void TestNoArticlesAreInBasketShouldHaveArticleCountOfZero()
     {
       var interactor = new GetBasketInteractor<IViewModel>(new TestGetBasketPresenter(), new InMemoryBasketRepository());
-      interactor.Execute(new GetBasketRequest { Email = "a@b.de" });
+      interactor.ExecuteAsync(new GetBasketRequest { Email = "a@b.de" });
 
       var response = ((TestGetBasketPresenter)interactor.Presenter).GetBasketResponse();
 
